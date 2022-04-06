@@ -3,16 +3,10 @@
 
 
 
-![Image](images/model.png)
-Figure: Measuring the performance tradeoff. Comparison
-between rare, common, and frequent categories AP for baselines
-and our method. We visualize the tradeoff for ‘common
-vs. frequent’ and ‘rare vs. frequent’as a Pareto frontier, where
-the top-right position indicates an ideal tradeoff between objectives.
-DropLoss achieves an improved tradeoff between
-object categories, resulting in higher overall AP.
+![Image](./images/model.png)
+The overview of the MoCA.
 
-This project is a pytorch implementation of *DropLoss for Long-Tail Instance Segmentation*. DropLoss improves long-tail instance segmentation by adaptively removing discouraging gradients to infrequent classes. A majority of the code is modified from [facebookresearch/detectron2](https://github.com/facebookresearch/detectron2) and [timy90022/DropLoss](https://github.com/timy90022/DropLoss).  
+This project is a pytorch implementation of *MoCA: A Monitoring Classification Accuracy Framework for Long-tailed Instance Segmentation*  
 
 
 
