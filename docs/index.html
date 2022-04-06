@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- modified from url=(0049)http://cs.stanford.edu/people/karpathy/deepvideo/ -->
+<html class="gr__ee_nthu_edu" lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164291330-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-164291330-1');
+  </script>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="houninghu" name="author">
+  <title>DropLoss for Long-Tail Instance Segmentation</title>
+  <!-- CSS includes -->
+  <link href="./asset/bootstrap.min.css" rel="stylesheet">
+  <link href="./asset/css" rel="stylesheet" type="text/css">
+  <link href="./asset/mystyle.css" rel="stylesheet">
+  <link href="./Ckin-Video-Player/dist/css/ckin.css" rel="stylesheet"/>
+  <link href="./Ckin-Video-Player/demoDist/demo.css" rel="stylesheet"/>
+  <link href="./asset/slideshow.css" rel="stylesheet"/>
+</head>
+<body data-gr-c-s-loaded="true">
+<!-- <div class="topnav" id="myTopnav">
+  <a href="#header">Home</a>
+  <a href="#example">Examples</a>
+  <a href="#abstract">Abstract</a>
+  <a href="#video">Video</a>
+  <a href="#links">Links</a>
+  <a href="#paper">BibTex</a>
+  <a href="#acknowledgment">Acknowledgments</a>
+  <a class="icon" href="javascript:void(0);" onclick="toggleTopNav()">&#9776;</a>
+</div> -->
+<div class="container-fluid" id="header">
+  <div class="row">
+    <h1>DropLoss for Long-Tail Instance Segmentation</h1>
+    <div class="authors">
+        <a href="https://timy90022.github.io/about/" target="_blank">Ting-I Hsieh</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://www.estherrobb.com/" target="_blank">Esther Robb</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://htchen.github.io/" target="_blank">Hwann-Tzong Chen</a><sup>1,3</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://filebox.ece.vt.edu/~jbhuang/" target="_blank">Jia-Bin Huang</a><sup>2</sup>
+      <p style="text-align:center;">
+        <sup>1</sup>National Tsing Hua University
+        &emsp;
+	<sup>2</sup>Virginia Tech
+	&emsp;
+	<sup>3</sup>Aeolus Robotics
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid" id="teaser">
+  <div class="row">
+    <p style="text-align:center;">
+      <img width="800" src="compare.png">
+    </p>
+  </div>
+  <div class="row">
+    <p style="text-align:center;">
+      <img width="800" src="img.png">
+    </p>
+  </div>
+</div>
+<div class="container" id="abstract">
+  <h2>Abstract</h2>
+Long-tailed class distributions are prevalent among the practical applications of object detection and instance segmentation. Prior work in long-tail instance segmentation addresses the imbalance of losses between rare and frequent categories by reducing the penalty for a model incorrectly predicting a rare class label. We demonstrate that the rare categories are heavily suppressed by correct background predictions, which reduces the probability for all foreground categories with equal weight. Due to the relative infrequency of rare categories, this leads to an imbalance that biases towards predicting more frequent categories. Based on this insight, we develop DropLoss -- a novel adaptive loss to compensate for this imbalance without a trade-off between rare and frequent categories. With this loss, we show state-of-the-art mAP across rare, common, and frequent categories on the LVIS dataset. </div>
+<div class="container" id="links">
+  <h2>Links</h2>
+  <div class="row"></div>
+    <div class="col-sm-2">
+      <a href="https://timy90022.github.io/DropLoss/" target="_blank">
+        <p style="text-align:center;">
+          <img height="80" src="./NeurIPS2020/pdf.png"><br>
+          Paper</p>
+      </a>
+    </div>
+    <div class="col-sm-2">
+      <a href="https://github.com/timy90022/DropLoss" target="_blank">
+        <p style="text-align:center;">
+          <img height="80" src="./NeurIPS2020/github.png"><br>
+          Code</p>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<div class="container" id="paper">
+  <h2>Citation</h2>
+  <div>
+	If you find this project useful, please cite this work:
+  </div>
+  <h4><b>BibTex</b></h4>
+  <div>
+  <pre class="citation">@inproceedings{DBLP:conf/aaai/Ting21,
+  author 	= {Ting-I Hsieh and Esther Robb and Hwann-Tzong Chen and Jia-Bin Huang},
+  title     = {DropLoss for Long-Tail Instance Segmentation},
+  booktitle = {Proceedings of the Workshop on Artificial Intelligence Safety 2021
+               (SafeAI 2021) co-located with the Thirty-Fifth {AAAI} Conference on
+               Artificial Intelligence {(AAAI} 2021), Virtual, February 8, 2021},
+  year      = {2021}
+  }
+  </pre>
+  </div>
+
+
+  <div id="footer">
+    <br>
+    <p style="text-align:center;">Copyright © Ting-I Hsieh 2020</p>
+  </div>
+</div>
+
+<!-- Javascript includes -->
+<script src="./asset/jquery-1.8.3.min.js"></script>
+<script src="./asset/mystyle.js"></script>
+<script src="./asset/bootstrap.min.js"></script>
+<script src="./Ckin-Video-Player/dist/js/ckin.js"></script>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+        document.getElementById("current_video0"+i).pause();
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    document.getElementById("current_video0"+(slideIndex-1)).play()
+  }
+  </script>
+
+<div id="point-jawn" style="z-index: 2147483647;"></div>
+</body>
+</html>
