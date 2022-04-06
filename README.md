@@ -71,8 +71,8 @@ python train_net.py --config-file configs/moca_mask_rcnn_R_50_FPN_1x.yaml --num-
 Model evaluation can be done similarly:
 
 ```
-cd /projects/MoCA/DropLoss_v1
-python train_net.py --config-file configs/droploss_mask_rcnn_R_50_FPN_1x.yaml --eval-only MODEL.WEIGHTS /path/to/model_checkpoint
+cd /projects/MoCA/moca
+python train_net.py --config-file configs/moca_mask_rcnn_R_50_FPN_1x.yaml --eval-only MODEL.WEIGHTS /path/to/model_checkpoint
 ```
 
 
