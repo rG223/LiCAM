@@ -1,4 +1,4 @@
-# MoCA: A Monitoring Classification Accuracy Framework for Long-tailed Instance Segmentation
+# LiCAM:  Long-Tailed Instance Segmentation with Real-Time Classification Accuracy Monitoring
 
 
 
