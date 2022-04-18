@@ -39,7 +39,7 @@ from detectron2.evaluation import (
     verify_results,
 )
 from detectron2.modeling import GeneralizedRCNNWithTTA
-from moca import add_config
+from licam import add_config
 import torch
 import numpy as np
 import matplotlib.pyplot as plt

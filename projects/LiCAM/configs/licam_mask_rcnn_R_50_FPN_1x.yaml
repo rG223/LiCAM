@@ -1,4 +1,4 @@
-_BASE_: "Base-MARFS-RCNN-FPN.yaml"
+_BASE_: "Base-LiCAM-RCNN-FPN.yaml"
 MODEL:
   WEIGHTS: https://dl.fbaipublicfiles.com/detectron2/ImageNetPretrained/MSRA/R-50.pkl
   MASK_ON: True
