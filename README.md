@@ -63,7 +63,7 @@ To train a model with 2 GPUs run:
 
 ```
 cd /projects/MoCA/moca
-python train_net.py --config-file configs/moca_mask_rcnn_R_50_FPN_1x.yaml --num-gpus 2
+python train_net.py --config-file configs/licam_resampling_mask_rcnn_R_50_FPN_1x.yaml --num-gpus 2
 ```
 
 ## Evaluation
@@ -72,7 +72,7 @@ Model evaluation can be done similarly:
 
 ```
 cd /projects/MoCA/moca
-python train_net.py --config-file configs/moca_mask_rcnn_R_50_FPN_1x.yaml --eval-only MODEL.WEIGHTS /path/to/model_checkpoint
+python train_net.py --config-file configs/licam_resampling_mask_rcnn_R_50_FPN_1x.yaml --eval-only MODEL.WEIGHTS /path/to/model_checkpoint
 ```
 
 
