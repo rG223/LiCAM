@@ -4,9 +4,9 @@
 
 
 ![Image](./images/model.png)
-The overview of the MoCA.
+The overview of the LiCAM.
 
-This project is a pytorch implementation of *MoCA: A Monitoring Classification Accuracy Framework for Long-tailed Instance Segmentation*  
+This project is a pytorch implementation of *LiCAM:  Long-Tailed Instance Segmentation with Real-Time Classification Accuracy Monitoring*  
 
 
 
@@ -62,7 +62,7 @@ Following the instructions of [README.md](https://github.com/facebookresearch/de
 To train a model with 2 GPUs run:
 
 ```
-cd /projects/MoCA/moca
+cd /projects/MoCA/licam
 python train_net.py --config-file configs/licam_resampling_mask_rcnn_R_50_FPN_1x.yaml --num-gpus 2
 ```
 
@@ -71,7 +71,7 @@ python train_net.py --config-file configs/licam_resampling_mask_rcnn_R_50_FPN_1x
 Model evaluation can be done similarly:
 
 ```
-cd /projects/MoCA/moca
+cd /projects/MoCA/licam
 python train_net.py --config-file configs/licam_resampling_mask_rcnn_R_50_FPN_1x.yaml --eval-only MODEL.WEIGHTS /path/to/model_checkpoint
 ```
 
