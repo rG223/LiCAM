@@ -75,6 +75,13 @@ cd /projects/LiCAM/licam
 python train_net.py --config-file configs/licam_resampling_mask_rcnn_R_50_FPN_1x.yaml --eval-only MODEL.WEIGHTS /path/to/model_checkpoint
 ```
 
+## Citation
+
+'''
+you can cite our work if this work is useful for you.
+
+@article{ye2022licam, title={LiCAM: Long-Tailed Instance Segmentation with Real-Time Classification Accuracy Monitoring}, author={Ye, Rongguang and Guo, Yantong and Shuai, Xian and Ye, Rongye and Jiang, Siyang and Jiang, Hui}, journal={Journal of Circuits, Systems and Computers}, pages={2350032}, year={2022}, publisher={World Scientific} }
+'''
 
 
 
